@@ -1,0 +1,16 @@
+version: "2.4"
+
+services:
+  database:
+    platform: linux/x86_64
+    image: mysql:8.0.27
+    restart: always
+    container_name: mysql.database
+    ports:
+    - 3306:3306/tcp
+    environment:
+      MYSQL_ROOT_PASSWORD: passwOrd
+      MYSQL_USER: test_mysql
+      MYSQL_DATABASE: world4app_db_local
+      MYSQL_PASSWORD: passwOrd
+
